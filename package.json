@@ -1,0 +1,12 @@
+{
+  "name": "taskvio",
+  "private": true,
+  "description": "TaskVio monorepo",
+  "scripts": {
+    "dev:backend": "npm run dev --prefix backend",
+    "dev:frontend": "npm run dev --prefix frontend",
+    "build:frontend": "npm run build --prefix frontend",
+    "db:migrate": "npm run db:migrate --prefix backend",
+    "db:seed": "npm run db:seed --prefix backend"
+  }
+}
