@@ -1,6 +1,10 @@
-# ⚡ TASKVIOO
+<div align="center">
+
+# ⚡Taskvioo
 
 ### Smart Project & Team Collaboration Platform
+
+</div>
 
 <p align="center">
 A modern productivity workspace for managing projects, tasks, and teams with a beautiful full-stack architecture.
