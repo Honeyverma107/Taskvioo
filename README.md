@@ -1,79 +1,244 @@
-# TaskVio
+# ⚡ TASKVIO
 
-Team task management app (React + Express + PostgreSQL + Prisma).
+### Smart Project & Team Collaboration Platform
 
-## Local setup
+<p align="center">
+A modern productivity workspace for managing projects, tasks, and teams with a beautiful full-stack architecture.
+</p>
 
-### Prerequisites
+<br/>
 
-- Node.js 18+
-- PostgreSQL
+<p align="center">
+<img src="https://img.shields.io/badge/React-Frontend-ff4da6?style=flat-square"/>
+<img src="https://img.shields.io/badge/Node.js-Backend-black?style=flat-square"/>
+<img src="https://img.shields.io/badge/PostgreSQL-Database-3f7cff?style=flat-square"/>
+<img src="https://img.shields.io/badge/Prisma-ORM-1d2433?style=flat-square"/>
+<img src="https://img.shields.io/badge/Auth-JWT-success?style=flat-square"/>
+</p>
 
-### 1. Backend
+---
+
+# 🌐 Live Deployment
+
+## 🚀 Frontend
+
+[https://taskvioo.vercel.app](https://taskvioo.vercel.app)
+
+---
+
+## ⚙️ Backend API
+
+[https://taskvioo-production.up.railway.app/api/health](https://taskvioo-production.up.railway.app/api/health)
+
+---
+
+# 🧩 About The Project
+
+TaskVio is a modern full-stack productivity platform designed for teams and individuals to efficiently manage workflows, assign tasks, monitor progress, and collaborate inside organized project workspaces.
+
+The application focuses on:
+
+* Clean UI/UX
+* Smooth workflow management
+* Secure authentication
+* Scalable backend architecture
+* Responsive cross-device experience
+
+---
+
+# 🎯 Main Highlights
+
+| Feature Area          | Description                                                 |
+| --------------------- | ----------------------------------------------------------- |
+| 🔐 Authentication     | JWT Authentication, Secure Login & Signup, Protected Routes |
+| 📁 Project Management | Create Projects, Manage Workspaces, Track Progress          |
+| ✅ Task System         | Assign Tasks, Status Workflow, Priority Levels, Due Dates   |
+| 🌙 User Experience    | Dark/Light Mode, Responsive Design, Smooth Animations       |
+
+---
+
+# 🛠️ Tech Stack
+
+## Frontend
+
+```yaml
+React.js
+Vite
+Tailwind CSS
+React Router
+Axios
+React Query
+Lucide Icons
+```
+
+---
+
+## Backend
+
+```yaml
+Node.js
+Express.js
+Prisma ORM
+PostgreSQL
+JWT
+bcryptjs
+```
+
+---
+
+# 📂 Project Structure
+
+```bash
+TASKVIO
+│
+├── frontend
+│   ├── src
+│   │   ├── api
+│   │   ├── components
+│   │   ├── context
+│   │   ├── pages
+│   │   └── main.jsx
+│   │
+│   └── package.json
+│
+├── backend
+│   ├── prisma
+│   │   └── schema.prisma
+│   │
+│   ├── src
+│   │   ├── controllers
+│   │   ├── middleware
+│   │   ├── routes
+│   │   └── index.js
+│   │
+│   └── package.json
+│
+└── README.md
+```
+
+---
+
+# 🚀 Core Features
+
+* Workspace & Team Collaboration
+* Real-Time Task Workflow
+* Project Progress Monitoring
+* Secure JWT Authentication
+* Responsive UI
+* Theme Toggle Support
+* RESTful API Architecture
+* PostgreSQL Database Integration
+
+---
+
+# 🧠 Architecture
+
+```text
+Frontend (React + Vite)
+        ↓
+REST API (Express.js)
+        ↓
+Prisma ORM
+        ↓
+PostgreSQL Database
+```
+
+---
+
+# ⚙️ Environment Variables
+
+## Backend `.env`
+
+```env
+PORT=5000
+
+DATABASE_URL="postgresql://postgres:password@localhost:5432/taskvio"
+
+JWT_SECRET=your_secret_key
+```
+
+---
+
+## Frontend `.env`
+
+```env
+VITE_API_URL=https://taskvioo-production.up.railway.app/api
+```
+
+---
+
+# 🚀 Local Setup
+
+## Clone Repository
+
+```bash
+git clone https://github.com/Anmolso107/taskvio.git
+cd taskvio
+```
+
+---
+
+## Backend Setup
 
 ```bash
 cd backend
-cp .env.example .env
-# Edit .env: DATABASE_URL, JWT_SECRET
+
 npm install
+
+npx prisma generate
+
 npx prisma migrate dev
-npm run db:seed
+
 npm run dev
 ```
 
-API: `http://localhost:5000` — health: `GET /api/health`
+---
 
-Demo login (after seed): `admin@taskvio.com` / `123456`
-
-### 2. Frontend
+## Frontend Setup
 
 ```bash
 cd frontend
-cp .env.example .env
+
 npm install
+
 npm run dev
 ```
 
-App: `http://localhost:5173`
+---
 
-## Deploy
+# 🌟 Future Improvements
 
-### Backend (Render)
+* 🔔 Real-time notifications
+* 📅 Calendar integration
+* 💬 Team chat system
+* 📊 Analytics dashboard
+* 🤖 AI-powered task recommendations
+* 📱 Mobile app support
 
-1. Push repo to GitHub.
-2. [Render Dashboard](https://dashboard.render.com) → **New Blueprint** → connect repo (uses root `render.yaml`).
-3. Set **CLIENT_URL** to your frontend URL (e.g. `https://your-app.vercel.app`).
-4. After first deploy, open the web service shell and run: `npm run db:seed` (optional demo user).
+---
 
-Or manually: **New Web Service** → root directory `backend`, build `npm install`, start `npm start`, attach PostgreSQL, set `DATABASE_URL`, `JWT_SECRET`, `CLIENT_URL`.
+# 👨‍💻 Developer
 
-### Frontend (Vercel)
+## Honey Verma
 
-1. Import repo; set **Root Directory** to `frontend`.
-2. Framework: Vite (auto-detected).
-3. Environment variable (required for production):
+* GitHub: [https://github.com/Honeyverma107](https://github.com/Honeyverma107)
+* LinkedIn: [https://www.linkedin.com/in/honey-verma-8052372a5](https://www.linkedin.com/in/honey-verma-8052372a5)
+* Email: [sv.honey107@gmail.com](mailto:sv.honey107@gmail.com)
 
-   | Name | Example |
-   |------|---------|
-   | `VITE_API_URL` | `https://your-api.onrender.com/api` |
+---
 
-4. Deploy. SPA routing is configured in `frontend/vercel.json`.
+# ⭐ Support
 
-### Environment checklist
+If you like this project:
 
-| Variable | Where | Required |
-|----------|--------|----------|
-| `DATABASE_URL` | Backend | Yes |
-| `JWT_SECRET` | Backend | Yes |
-| `CLIENT_URL` | Backend | Production (CORS) |
-| `PORT` | Backend | Set by host |
-| `VITE_API_URL` | Frontend build | Production |
+* Star the repository
+* Fork the project
+* Share it with others
 
-## Scripts
+---
 
-| Command | Location | Description |
-|---------|----------|-------------|
-| `npm run dev` | `backend` / `frontend` | Development server |
-| `npm start` | `backend` | Migrate + start API |
-| `npm run build` | `frontend` | Production build |
-| `npm run db:seed` | `backend` | Create demo admin user |
+<div align="center">
+
+### Built with ❤️ using React, Node.js & PostgreSQL
+
+</div>
